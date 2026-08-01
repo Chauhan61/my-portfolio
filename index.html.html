@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Portfolio</title>
+    <!-- Include the official Lottie Web Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lottie-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .lottie-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lottie-container {
+            width: 100%;
+            height: 250px; /* Fixed height for consistency */
+            cursor: pointer;
+            margin-bottom: 1rem;
+            background: #ffffff0d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-info {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .trigger-badge {
+            font-size: 0.75rem;
+            background: var(--accent);
+            padding: 2px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        button {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #334155;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Manoj Vector Animation Portfolio</h1>
+        <p>Interactive Lottie integrations</p>
+    </header>
+
+    <div class="portfolio-grid">
+
+        <!-- Card 1: Plays on Hover -->
+        <div class="lottie-card" 
+             data-src="JSON\DE_logo.json" 
+             data-trigger="hover">
+            <div class="card-info">
+                <h3 class="card-title">DE Logo <span class="trigger-badge">Hover</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 2: Plays on Click -->
+        <div class="lottie-card" 
+             data-src="JSON\cup.json" 
+             data-trigger="click">
+            <div class="card-info">
+                <h3 class="card-title">Cup Icon<span class="trigger-badge">Click</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Plays on Scroll (Intersection Observer) -->
+        <div class="lottie-card" 
+             data-src="JSON\UI.json" 
+             data-trigger="scroll">
+            <div class="card-info">
+                <h3 class="card-title">UI Icon<span class="trigger-badge">Scroll</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+    </div>
+<div>
+    
+</div>
+      <div class="portfolio-grid">
+
+        <!-- Card 1: Plays on Hover -->
+        <div class="lottie-card" 
+             data-src="JSON/Creative Package.json" 
+             data-trigger="hover">
+            <div class="card-info">
+                <h3 class="card-title">Creative Package<span class="trigger-badge">Hover</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 2: Plays on Click -->
+        <div class="lottie-card" 
+             data-src="JSON/Animation01.json" 
+             data-trigger="click">
+            <div class="card-info">
+                <h3 class="card-title">Ball Bounce <span class="trigger-badge">Click</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Plays on Scroll (Intersection Observer) -->
+        <div class="lottie-card" 
+             data-src="JSON/Email-marketing.json" 
+             data-trigger="scroll">
+            <div class="card-info">
+                <h3 class="card-title">Email-marketing <span class="trigger-badge">Scroll</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 1: Plays on Hover -->
+        <div class="lottie-card" 
+             data-src="JSON\01.json" 
+             data-trigger="hover">
+            <div class="card-info">
+                <h3 class="card-title">Fake 3D Star <span class="trigger-badge">Hover</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 2: Plays on Click -->
+        <div class="lottie-card" 
+             data-src="JSON\sandwich.json" 
+             data-trigger="click">
+            <div class="card-info">
+                <h3 class="card-title">Sandwich drop <span class="trigger-badge">Click</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Plays on Scroll (Intersection Observer) -->
+        <div class="lottie-card" 
+             data-src="JSON\Flower06.json" 
+             data-trigger="scroll">
+            <div class="card-info">
+                <h3 class="card-title">Flower Graphic <span class="trigger-badge">Scroll</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+    </div>
+<div>
+    
+</div>
+      <div class="portfolio-grid">
+
+        <!-- Card 1: Plays on Hover -->
+        <div class="lottie-card" 
+             data-src="JSON/Simply-vitamin-Logo.json" 
+             data-trigger="hover">
+            <div class="card-info">
+                <h3 class="card-title">Logo Animation<span class="trigger-badge">Hover</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 2: Plays on Click -->
+        <div class="lottie-card" 
+             data-src="JSON/CMP_Lottifiles Animation-v1.json" 
+             data-trigger="click">
+            <div class="card-info">
+                <h3 class="card-title">ECMP Animation<span class="trigger-badge">Click</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Plays on Scroll (Intersection Observer) -->
+        <div class="lottie-card" 
+             data-src="JSON/Morphing.json" 
+             data-trigger="scroll">
+            <div class="card-info">
+                <h3 class="card-title">Loader Graphic <span class="trigger-badge">Scroll</span></h3>
+            </div>
+            <div class="lottie-container"></div>
+            <div class="controls">
+                <button class="btn-play">Play</button>
+                <button class="btn-pause">Pause</button>
+                <button class="btn-stop">Stop</button>
+            </div>
+        </div>
+
+    </div>
+<div  style ="margin-top: 2rem; text-align: center; font-size: 0.9rem; color: #94a3b8;">
+    <p>All content, designs, and animations in this portfolio are my original work.Do not copy, download, distribute, or modify any material without my explicit written permission. Unauthorized usage constitutes copyright infringement and will be met with legal action.</p>
+</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll('.lottie-card');
+
+            // Setup Intersection Observer for "scroll" trigger
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const anim = entry.target.lottieInstance;
+                    if (entry.isIntersecting) {
+                        anim.play();
+                    } else {
+                        anim.pause();
+                    }
+                });
+            }, { threshold: 0.5 }); // Triggers when 50% of the card is visible
+
+            cards.forEach(card => {
+                const container = card.querySelector('.lottie-container');
+                const src = card.dataset.src;
+                const trigger = card.dataset.trigger; 
+
+                // 1. Initialize Lottie for this specific card
+                const anim = lottie.loadAnimation({
+                    container: container,
+                    renderer: 'svg', // Ideal for flat mathematical vector shapes
+                    loop: true,
+                    autoplay: trigger === 'autoplay', // Only true autoplay if defined
+                    path: src
+                });
+
+                // Attach the animation instance to the DOM element for easy reference
+                card.lottieInstance = anim;
+
+                // 2. Setup Automatic Triggers
+                if (trigger === 'hover') {
+                    anim.autoplay = false;
+                    card.addEventListener('mouseenter', () => anim.play());
+                    card.addEventListener('mouseleave', () => anim.stop());
+                } else if (trigger === 'click') {
+                    anim.autoplay = false;
+                    container.addEventListener('click', () => {
+                        if (anim.isPaused) anim.play();
+                        else anim.pause();
+                    });
+                } else if (trigger === 'scroll') {
+                    anim.autoplay = false;
+                    observer.observe(card);
+                }
+
+                // 3. Setup Manual Control Buttons
+                const playBtn = card.querySelector('.btn-play');
+                const pauseBtn = card.querySelector('.btn-pause');
+                const stopBtn = card.querySelector('.btn-stop');
+
+                if (playBtn) playBtn.addEventListener('click', () => anim.play());
+                if (pauseBtn) pauseBtn.addEventListener('click', () => anim.pause());
+                if (stopBtn) stopBtn.addEventListener('click', () => {
+                    anim.stop();
+                    // Optional: reset to first frame
+                    anim.goToAndStop(0, true);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
